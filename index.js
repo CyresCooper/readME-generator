@@ -34,7 +34,7 @@ const questions = ([
   },
   {
     type:'choices',
-    message: '',
+    choices: ['Academic Free License v3.0',"MIT","Open Software License 3.0","Other", "None"],
     name:"license"
 },
  {
