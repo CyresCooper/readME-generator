@@ -1,4 +1,8 @@
 // TODO: Include packages needed for this application
+const util = require("util");
+const inquirer = require("inquirer");
+const fs = require("fs");
+const generateReadme = require("./utils/generateReadme")
 
 // TODO: Create an array of questions for user input
 const questions = [];
