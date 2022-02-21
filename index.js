@@ -10,7 +10,13 @@ var questions = [
     type: "input",
       message: "What it the title of this project?",
       name: "projectTitle", 
+      validate: function (response) {
+        if (response.length < 1) {
+            return console.log("Please enter a valid response");
+        }
+        return true;
 },
+    },
   {
     type: "input",
     message: "Please explain the installation process if necessary.",
@@ -20,18 +26,35 @@ var questions = [
     type: "input",
     message: "How do you Use your application?",
     name: "usageinfo",
+    validate: function (response) {
+        if (response.length < 1) {
+            return console.log("Please enter a valid response");
+        }
+        return true;
+},
 },
  { 
     type: "input",
     message: "Please provide a breif description of your project.",
-    name: "description",  
+    name: "description",
+    validate: function (response) {
+        if (response.length < 1) {
+            return console.log("Please enter a valid response");
+        }
+        return true;
+},
        },
   {
       type: "input",
       message: "Who are the people contributiing to your project?",
       name: "contributing",
+      validate: function (response) {
+        if (response.length < 1) {
+            return console.log("Please enter a valid response");
+        }
+        return true;
+},
   },
- 
  {
       type: "input",
       message: "How do people test your project?",
@@ -45,12 +68,24 @@ var questions = [
   {
       type: "input",
       message: "Enter your GitHub username:",
-      name: "userNameGitHub"
+      name: "userNameGitHub",
+      validate: function (response) {
+        if (response.length < 1) {
+            return console.log("Please enter a valid response");
+        }
+        return true;
+},
   },
   {
       type: "input",
       message: "What is your email address?",
-      name: "userEmail"
+      name: "userEmail",
+      validate: function (response) {
+        if (response.length < 1) {
+            return console.log("Please enter a valid response");
+        }
+        return true;
+},
   },
 ]
 //function for readme

@@ -1,6 +1,6 @@
 
 function generateMarkdown(promptResponse) {
-  var content = `#### ${promptResponse.ProjectTitle}
+  var content = `# ${promptResponse.projectTitle}
   
   # License
 $![${promptResponse.license}](https://img.shields.io/badge/license-${promptResponse.license}-red)
