@@ -3,7 +3,7 @@ function generateMarkdown(promptResponse) {
   var content = `# ${promptResponse.projectTitle}
   
   # License
-$ ![${promptResponse.license}](https://img.shields.io/badge/license-${promptResponse.license}-red)
+ ![${promptResponse.license}](https://img.shields.io/badge/license-${promptResponse.license}-red)
   
 ### Table of Contents
 * [Description](#Description)
