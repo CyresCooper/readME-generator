@@ -28,9 +28,4 @@ Clone the code to you machine and type in "node index.js" into the terminal and 
 #### Questions
 If you have anyquestions you can contact me via: [Github](https://www.github.com/CyresCooper) [Email Me](mailto:CyresCooper@gmail.com)
 
-
-## Demo 
-[viedo link](https://drive.google.com/file/d/1Gq0RPnsx1FauA9GXLwcBSbve16CK0Mp6/view)
-![Demo](./images/Questions-Responces.PNG)
-![Demo](./images/readme.PNG)
   
