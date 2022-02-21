@@ -1,47 +1,47 @@
 //Packages needed for this application
-const util = require("util");
-const inquirer = require("inquirer");
-const fs = require("fs");
-const generateReadme = require("./utils/generateReadme")
+const inquirer = require('inquirer');
+const fs = require('fs');
+const generateMarkdown = require('./generateMarkdown');
 
-//Array of questions for user input
-const questions = ([
+//Questions for Read me Prompt 
+var questions = [
 
     {
     type: "input",
       message: "What it the title of this project?",
       name: "projectTitle", 
 },
-{ 
-    type: "input",
-    message: "Please provide a breif description of your project.",
-    name: "description",  
-       },
   {
     type: "input",
     message: "Please explain the installation process if necessary.",
     name: "installation-process",
  },
-  {
-      type: "input",
-      message: "How do you Use your application?",
-      name: "usageinfo",
-  },
+ {
+    type: "input",
+    message: "How do you Use your application?",
+    name: "usageinfo",
+},
+ { 
+    type: "input",
+    message: "Please provide a breif description of your project.",
+    name: "description",  
+       },
   {
       type: "input",
       message: "Who are the people contributiing to your project?",
       name: "contributing",
+  },
+ 
+ {
+      type: "input",
+      message: "How do people test your project?",
+      name: "tests"
   },
   {
     type:'choices',
     choices: ['Academic Free License v3.0',"MIT","Open Software License 3.0","Other", "None"],
     name:"license"
 },
- {
-      type: "input",
-      message: "How do people test your project?",
-      name: "tests"
-  },
   {
       type: "input",
       message: "Enter your GitHub username:",
@@ -52,13 +52,15 @@ const questions = ([
       message: "What is your email address?",
       name: "userEmail"
   },
-]);
-
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
-init();
+]
+//function for readme
+inquirer.prompt(questions).then(function(promptResponse) {
+    console.log(promptResponse);
+    
+     var content = generateMarkdown(promptResponse);
+     console.log(content);
+      fs.writeFile("./ReadMe.md", content, function(err){
+          if (err) throw err
+          console.log("Enjoy your ReadMe!");
+      });
+ } ); 
