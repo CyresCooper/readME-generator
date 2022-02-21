@@ -1,7 +1,7 @@
 # ReadMe Generator
   
   # License
-$![MIT](https://img.shields.io/badge/license-MIT-red)
+$ ![MIT](https://img.shields.io/badge/license-MIT-red)
   
 ### Table of Contents
 * [Description](#Description)
@@ -14,7 +14,7 @@ $![MIT](https://img.shields.io/badge/license-MIT-red)
 Using the given code you can quickly and easily generate a professinal ReadMe
   
 # Usage
-You use the giving question to the user to fill out and create a Readme
+You use the given questions to the user so they can  fill out and create a Readme from the terminal and it comes out auto formated
 
 # Contributing
 Myself
